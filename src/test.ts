@@ -11,7 +11,17 @@ numbers.forEach((item, index, arr) => {
   console.log(`numbers[${index}] = ${arr[index]}`);
 });
 
-// tuples
+// tuples are the key value pairs
 
 let user: [number, string] = [1, "Subham"];
 console.log(user[1].length);
+console.log(user);
+
+user.push(1);
+console.log(user.length);
+console.log(user);
+
+let record: [string, number, boolean] = ["Aditya", 24, true];
+
+console.log(record);
+console.log(record.length);
