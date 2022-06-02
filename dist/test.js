@@ -8,4 +8,7 @@ let numbers = [5, 8, 11];
 numbers.forEach((item, index, arr) => {
     console.log(`numbers[${index}] = ${arr[index]}`);
 });
+// tuples
+let user = [1, "Subham"];
+console.log(user[1].length);
 //# sourceMappingURL=test.js.map
