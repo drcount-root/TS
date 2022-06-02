@@ -1,6 +1,9 @@
 "use strict";
-// const MJ: string = "Michelle Jones";
-// const herAge: number = 17;
-// const isSpiderMansGF: boolean = true;
-// const res: string = isSpiderMansGF ? "Spider Man's GF" : "ERROR!";
-// console.log(`\n${MJ} is ${res} & her age is ${herAge}\n`);
+const MJ = "Michelle Jones";
+const herAge = 17;
+const isSpiderMansGF = true;
+const res = isSpiderMansGF ? "Spider Man's GF" : "ERROR!";
+console.log(`\n${MJ} is ${res} & her age is ${herAge}\n`);
+const lightspeed = 299792458;
+console.log(lightspeed);
+//# sourceMappingURL=script.js.map
