@@ -2,5 +2,11 @@ let sales: number = 123_456_789;
 let course: string = "TypeScript";
 let is_published: boolean = true;
 
-let level;
-console.log(typeof level);
+let level; // level variable is type of "any"
+
+// console.log(typeof level);
+
+let numbers: number[] = [5, 8, 11];
+numbers.forEach((item, index, arr) => {
+  console.log(`numbers[${index}] = ${arr[index]}`);
+});
