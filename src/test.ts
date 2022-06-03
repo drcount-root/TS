@@ -63,3 +63,26 @@ function calculateTax(income: number, taxYear = 2022): number {
 
 console.log(calculateTax(10_000, 2023));
 console.log(calculateTax(10_000, 2021));
+console.log(calculateTax(10_000));
+
+// objects
+
+let employee: {
+  readonly id: number;
+  name: string;
+  retire: (date: Date) => void;
+} = {
+  id: 1,
+  name: "Mosh",
+  retire: (date: Date) => {
+    console.log(date);
+  },
+};
+// employee.id = 0;        // can't assign value to id as it is readonly property
+employee.name = "binaryBOSS";
+
+console.log(employee["name"]);
+
+
+// Type Aliases
+
