@@ -11,7 +11,7 @@ numbers.forEach((item, index, arr) => {
   console.log(`numbers[${index}] = ${arr[index]}`);
 });
 
-// tuples are the key value pairs
+// "tuple" data types are the key value pairs
 
 let user: [number, string] = [1, "Subham"];
 console.log(user[1].length);
@@ -25,3 +25,19 @@ let record: [string, number, boolean] = ["Aditya", 24, true];
 
 console.log(record);
 console.log(record.length);
+
+// "enum" data type represents list of related constants
+
+// const small = 1;
+// const medium = 2;
+// const large = 3;
+
+// PascalCase - first letter of every word should be uppercase
+// By default TS compiler set the value of Small member = 0 and Medium = 1 and Large = 2
+// We can change that by explicitly assigning values
+enum Size {
+  Small = 1,
+  Medium,
+  Large,
+}
+// Now it automatically assigned Medium = 2 & Large = 3 as we explicitly set value of Small member to 1.
