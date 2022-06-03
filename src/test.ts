@@ -151,3 +151,18 @@ function greet(name: string | null | undefined) {
 greet("Kylz");
 greet(null);
 greet(undefined);
+
+// Optional chaining
+
+type Customer = {
+  birthday?: Date; // birthday property is now optional
+};
+
+function getCustomer(id: number): Customer | null | undefined {
+  return id === 0 ? null : { birthday: new Date() };
+}
+let customer = getCustomer(1);
+// if (customer !== null && customer !== undefined) console.log(customer.birthday);
+
+// Optional chaining : optional property access operator
+console.log(customer?.birthday?.getFullYear());
