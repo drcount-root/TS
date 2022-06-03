@@ -8,7 +8,7 @@ let numbers = [5, 8, 11];
 numbers.forEach((item, index, arr) => {
     console.log(`numbers[${index}] = ${arr[index]}`);
 });
-// tuples are the key value pairs
+// "tuple" data types are the key value pairs
 let user = [1, "Subham"];
 console.log(user[1].length);
 console.log(user);
@@ -18,4 +18,10 @@ console.log(user);
 let record = ["Aditya", 24, true];
 console.log(record);
 console.log(record.length);
+// Now it automatically assigned Medium = 2 & Large = 3 as we explicitly set value of Small member to 1.
+let mySize = 2 /* Size.Medium */;
+console.log(mySize);
+// If we do assign string value to any member, then we must explicitly assign some kind of values to another members
+let largeSize = 2.783e+77 /* Another.Large */;
+console.log(largeSize);
 //# sourceMappingURL=test.js.map

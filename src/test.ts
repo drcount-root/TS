@@ -35,9 +35,23 @@ console.log(record.length);
 // PascalCase - first letter of every word should be uppercase
 // By default TS compiler set the value of Small member = 0 and Medium = 1 and Large = 2
 // We can change that by explicitly assigning values
-enum Size {
+const enum Size {
   Small = 1,
   Medium,
   Large,
 }
 // Now it automatically assigned Medium = 2 & Large = 3 as we explicitly set value of Small member to 1.
+
+let mySize: Size = Size.Medium;
+console.log(mySize);
+
+const enum Another {
+  Small = "str",
+  Medium = 89,
+  Large = 27830e73,
+}
+
+// If we do assign string value to any member, then we must explicitly assign some kind of values to another members
+
+let largeSize: Another = Another.Large;
+console.log(largeSize);
