@@ -102,3 +102,15 @@ let employee: Employee = {
 employee.name = "binaryBOSS";
 
 console.log(employee["name"]);
+
+// Union types
+// the vertical bar represents that
+
+function kgToLbs(weight: number | string): number {
+  // Narrowing
+  if (typeof weight === "number") return weight * 2.2;
+  else return parseInt(weight) * 2.2;
+}
+
+console.log(kgToLbs(10));
+console.log(kgToLbs("10kg"));

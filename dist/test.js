@@ -53,4 +53,15 @@ let employee = {
 // employee.id = 0;        // can't assign value to id as it is readonly property
 employee.name = "binaryBOSS";
 console.log(employee["name"]);
+// Union types
+// the vertical bar represents that
+function kgToLbs(weight) {
+    // Narrowing
+    if (typeof weight === "number")
+        return weight * 2.2;
+    else
+        return parseInt(weight) * 2.2;
+}
+console.log(kgToLbs(10));
+console.log(kgToLbs("10kg"));
 //# sourceMappingURL=test.js.map
