@@ -31,4 +31,26 @@ function calculateTax(income, taxYear = 2022) {
 }
 console.log(calculateTax(10000, 2023));
 console.log(calculateTax(10000, 2021));
+console.log(calculateTax(10000));
+// objects
+let employees = {
+    id: 1,
+    name: "Mosh",
+    retire: (date) => {
+        console.log(date);
+    },
+};
+// employee.id = 0;        // can't assign value to id as it is readonly property
+employees.name = "binaryBOSS";
+console.log(employees["name"]);
+let employee = {
+    id: 1,
+    name: "Mosh",
+    retire: (date) => {
+        console.log(date);
+    },
+};
+// employee.id = 0;        // can't assign value to id as it is readonly property
+employee.name = "binaryBOSS";
+console.log(employee["name"]);
 //# sourceMappingURL=test.js.map
