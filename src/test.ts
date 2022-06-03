@@ -166,3 +166,22 @@ let customer = getCustomer(1);
 
 // Optional chaining : optional property access operator
 console.log(customer?.birthday?.getFullYear());
+
+// optional element access operator : useful when dealing with array
+
+// if(customers !== null && customers !== undefined)
+//        customers[0]
+
+// So first we have to check the customers array is null and undefined, before we access its elements
+
+// OR
+
+// customers?.[0]  // optional element access operator => ?.
+
+// Optional call operator
+// let log: any = (message: string) => {
+//   console.log(message);
+// }
+
+let log: any = null;
+console.log(log?.("a"));
