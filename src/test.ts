@@ -67,7 +67,7 @@ console.log(calculateTax(10_000));
 
 // objects
 
-let employee: {
+let employees: {
   readonly id: number;
   name: string;
   retire: (date: Date) => void;
@@ -79,10 +79,26 @@ let employee: {
   },
 };
 // employee.id = 0;        // can't assign value to id as it is readonly property
-employee.name = "binaryBOSS";
+employees.name = "binaryBOSS";
 
-console.log(employee["name"]);
-
+console.log(employees["name"]);
 
 // Type Aliases
 
+type Employee = {
+  readonly id: number;
+  name: string;
+  retire: (date: Date) => void;
+};
+
+let employee: Employee = {
+  id: 1,
+  name: "Mosh",
+  retire: (date: Date) => {
+    console.log(date);
+  },
+};
+// employee.id = 0;        // can't assign value to id as it is readonly property
+employee.name = "binaryBOSS";
+
+console.log(employee["name"]);
