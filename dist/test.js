@@ -64,4 +64,10 @@ function kgToLbs(weight) {
 }
 console.log(kgToLbs(10));
 console.log(kgToLbs("10kg"));
+let textBox = {
+    drag: () => { },
+    resize: () => { },
+};
+let quantity = 100;
+let howLong = "cm";
 //# sourceMappingURL=test.js.map
