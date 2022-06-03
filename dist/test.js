@@ -5,7 +5,7 @@ let is_published = true;
 let level; // level variable is type of "any"
 // console.log(typeof level);
 let numbers = [5, 8, 11];
-numbers.forEach((item, index, arr) => {
+numbers.forEach(function (_item, index, arr) {
     console.log(`numbers[${index}] = ${arr[index]}`);
 });
 // "tuple" data types are the key value pairs
@@ -24,4 +24,11 @@ console.log(mySize);
 // If we do assign string value to any member, then we must explicitly assign some kind of values to another members
 let largeSize = 2.783e+77 /* Another.Large */;
 console.log(largeSize);
+function calculateTax(income, taxYear = 2022) {
+    if (taxYear < 2022)
+        return income * 1.2;
+    return income * 1.3;
+}
+console.log(calculateTax(10000, 2023));
+console.log(calculateTax(10000, 2021));
 //# sourceMappingURL=test.js.map

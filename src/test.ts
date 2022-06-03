@@ -7,7 +7,7 @@ let level; // level variable is type of "any"
 // console.log(typeof level);
 
 let numbers: number[] = [5, 8, 11];
-numbers.forEach((item, index, arr) => {
+numbers.forEach(function (_item, index, arr) {
   console.log(`numbers[${index}] = ${arr[index]}`);
 });
 
@@ -55,3 +55,11 @@ const enum Another {
 
 let largeSize: Another = Another.Large;
 console.log(largeSize);
+
+function calculateTax(income: number, taxYear = 2022): number {
+  if (taxYear < 2022) return income * 1.2;
+  return income * 1.3;
+}
+
+console.log(calculateTax(10_000, 2023));
+console.log(calculateTax(10_000, 2021));
