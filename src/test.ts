@@ -140,3 +140,14 @@ let quantity: Quantity = 100;
 
 type Metric = "cm" | "inch";
 let howLong: Metric = "cm";
+
+// Nullable Types
+
+function greet(name: string | null | undefined) {
+  if (name) console.log(name.toUpperCase());
+  else console.log("Hola!");
+}
+
+greet("Kylz");
+greet(null);
+greet(undefined);

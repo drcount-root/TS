@@ -70,4 +70,14 @@ let textBox = {
 };
 let quantity = 100;
 let howLong = "cm";
+// Nullable Types
+function greet(name) {
+    if (name)
+        console.log(name.toUpperCase());
+    else
+        console.log("Hola!");
+}
+greet("Kylz");
+greet(null);
+greet(undefined);
 //# sourceMappingURL=test.js.map
