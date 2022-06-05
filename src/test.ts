@@ -102,3 +102,86 @@ let employee: Employee = {
 employee.name = "binaryBOSS";
 
 console.log(employee["name"]);
+
+// Union types
+// the vertical bar represents that
+
+function kgToLbs(weight: number | string): number {
+  // Narrowing
+  if (typeof weight === "number") return weight * 2.2;
+  else return parseInt(weight) * 2.2;
+}
+
+console.log(kgToLbs(10));
+console.log(kgToLbs("10kg"));
+
+// Intersection Types
+
+type Draggable = {
+  drag: () => void;
+};
+
+type Resizable = {
+  resize: () => void;
+};
+
+type UIWidget = Draggable & Resizable;
+
+let textBox: UIWidget = {
+  drag: () => {},
+  resize: () => {},
+};
+
+// Literal types (exact, specific)
+
+type Quantity = 50 | 100;
+
+let quantity: Quantity = 100;
+
+type Metric = "cm" | "inch";
+let howLong: Metric = "cm";
+
+// Nullable Types
+
+function greet(name: string | null | undefined) {
+  if (name) console.log(name.toUpperCase());
+  else console.log("Hola!");
+}
+
+greet("Kylz");
+greet(null);
+greet(undefined);
+
+// Optional chaining
+
+type Customer = {
+  birthday?: Date; // birthday property is now optional
+};
+
+function getCustomer(id: number): Customer | null | undefined {
+  return id === 0 ? null : { birthday: new Date() };
+}
+let customer = getCustomer(1);
+// if (customer !== null && customer !== undefined) console.log(customer.birthday);
+
+// Optional chaining : optional property access operator
+console.log(customer?.birthday?.getFullYear());
+
+// optional element access operator : useful when dealing with array
+
+// if(customers !== null && customers !== undefined)
+//        customers[0]
+
+// So first we have to check the customers array is null and undefined, before we access its elements
+
+// OR
+
+// customers?.[0]  // optional element access operator => ?.
+
+// Optional call operator
+// let log: any = (message: string) => {
+//   console.log(message);
+// }
+
+let log: any = null;
+console.log(log?.("a"));
